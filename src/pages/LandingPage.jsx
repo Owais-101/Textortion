@@ -15,9 +15,8 @@ const LandingPage = () => {
                 </div>
 
                 <HeroSection />
-
             </div>
-            <Demo />
+                <Demo />
         </>
     )
 }
