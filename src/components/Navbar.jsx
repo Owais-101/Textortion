@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Only Navbar */}
-            <div className='flex md:hidden items-center  px-5'>
+            <div className='flex md:hidden items-center px-5'>
 
                 <div className='flex items-center gap-2 mt-5'>
                     <span className='text-lime text-2xl' >✦</span>
@@ -39,13 +39,13 @@ const Navbar = () => {
 
                 <button
                     onClick={() => setOpen(!open)}
-                    className="lg:hidden fixed top-4 right-5 z-200 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+                    className="lg:hidden ml-auto z-200 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
                     aria-label="Menu"
                 >
                     <motion.span
                         animate={open ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
                         transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
-                        className={`block w-6 h-0.5 ${setOpen ? `bg-lime` : `bg-white`} origin-center`}
+                        className={`block w-6 h-0.5 ${open ? `bg-background` : `bg-lime`} origin-center`}
                     />
                     <motion.span
                         animate={open ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
@@ -55,7 +55,7 @@ const Navbar = () => {
                     <motion.span
                         animate={open ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
                         transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
-                        className={`block w-6 h-0.5 ${setOpen ? `bg-background` : `bg-white`} origin-center`}
+                        className={`block w-6 h-0.5 ${open ? `bg-background` : `bg-lime`} origin-center`}
                     />
                 </button>
 

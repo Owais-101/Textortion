@@ -33,13 +33,33 @@ background-color: #0a0a0a
   background-size: 72px 72px;
 }
 
-/* Button hover */
+/* Primary Button hover */
 .button-hover {
   transition: all 0.3s ease;
 }
-
 .button-hover:hover {
   background-color: #ffffff;
   box-shadow: 4px 4px 0px #ccff00;
   transform: translate(-2px, -2px);
 }
+
+/* Secondary Button hover */
+.secondary-button-hover{
+    transition: all 0.3s ease;
+
+}
+.secondary-button-hover:hover{
+color: var(--color-hotpink);
+box-shadow: 4px 4px 0px var(--color-hotpink);
+border: 1px solid var(--color-hotpink);
+  transform: translate(-2px, -2px);
+
+}
+
+/* Code card linear gradient shadow*/
+.code-card-shadow{
+border: 1px solid transparent;
+  background: 
+    linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+    linear-gradient(135deg, var(--color-lime) 0%, transparent 50%, var(--color-hotpink) 100%) border-box;
+  }
