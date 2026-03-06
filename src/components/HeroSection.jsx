@@ -26,7 +26,7 @@ const HeroSection = () => {
 
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-[60%_40%] container mx-auto'>
+        <div className='grid grid-cols-1 lg:grid-cols-[60%_40%]'>
             {/* left side */}
             <div className='h-full  py-5'>
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 </div>
 
                 <div className='font-body text-offwhite text-xs md:text-base mt-10 text-center lg:text-start'>
-                    <p>Textortion gives you <span className='text-hotpink'>10+ animated text effects.</span> <br /> Copy the React component. Paste. Done </p>
+                    <p>Textortion gives you <span className='text-hotpink'>10+ animated text effects,</span> <br /> Copy the React Component paste and done </p>
                 </div>
 
                 <div className='mt-10 flex gap-5 justify-center lg:justify-start'>
@@ -66,8 +66,8 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            <div className=' w-fit rounded-xl border py-2 px-6 text-offwhite font-heading text-xs md:text-base font-extrabold mt-7 hover:border-lime text-center' >
-                <h2 className='text-lime'>Zero($) to Start <br /> <span className='text-white'>Free for ALL</span> </h2>
+            <div className=' w-fit rounded-xl border py-2 px-6 text-offwhite font-heading text-xs lg:text-base  mt-7 hover:border-lime text-center mx-auto lg:mx-0 ' >
+                <h2 className='text-lime font-extrabold'>Zero($) to Start <br /> <span className='text-white font-body tracking-wide font-medium'>FREE FOR ALL</span> </h2>
             </div>
 
         </div>
