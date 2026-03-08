@@ -52,7 +52,7 @@ const animationsList = [
 
 export function Demo() {
   return (
-    <div className=" w-full mt-10 border-y border-neutral-500 py-3 flex items-center justify-center">
+    <div className=" w-full my-10 border-y border-neutral-500 py-3 flex items-center justify-center">
       <Marquee>
         <MarqueeFade side="left" />
         <MarqueeContent speed={80}>

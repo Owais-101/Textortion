@@ -66,7 +66,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            <div className=' w-fit rounded-xl border py-2 px-6 text-offwhite font-heading text-xs lg:text-base  mt-7 hover:border-lime text-center mx-auto lg:mx-0 ' >
+            <div className=' w-fit rounded-xl border py-2 px-6 text-offwhite font-heading text-xs lg:text-base mt-5 hover:border-lime text-center mx-auto lg:mx-0 ' >
                 <h2 className='text-lime font-extrabold'>Zero($) to Start <br /> <span className='text-white font-body tracking-wide font-medium'>FREE FOR ALL</span> </h2>
             </div>
 

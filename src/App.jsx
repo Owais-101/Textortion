@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage';
 
 const App = () => {
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
