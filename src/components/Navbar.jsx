@@ -39,7 +39,7 @@ const Navbar = () => {
 
                 <button
                     onClick={() => setOpen(!open)}
-                    className="lg:hidden ml-auto z-200 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
+                    className="lg:hidden ml-auto mt-3 z-200 w-10 h-10 flex flex-col justify-center items-center gap-1.5"
                     aria-label="Menu"
                 >
                     <motion.span

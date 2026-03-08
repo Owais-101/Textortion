@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Loading from './components/Loading'
 import { motion } from 'motion/react';
 import LandingPage from './pages/LandingPage';
+import { Route, Routes } from 'react-router';
+import Animations from './pages/Animations';
 
 const App = () => {
 
@@ -16,17 +18,24 @@ const App = () => {
 
   return (
     <div>
-      {!isLoading ? <Loading /> :
 
-        <motion.div
+      {!isLoading
+        ? <Loading />
+        : <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.2,
             ease: 'linear',
           }}>
-          <LandingPage />
+
+          <Routes>
+            <Route path='/' element={<LandingPage />} />
+            <Route path='/animations' element={<Animations />} />
+          </Routes>
+
         </motion.div>}
+
     </div>
   )
 }

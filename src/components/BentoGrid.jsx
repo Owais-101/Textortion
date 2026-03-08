@@ -46,13 +46,13 @@ const BentoGrid = () => {
     const cardVariant = {
         rest: {},
         hover: {
-            transition: { staggerChildren: 0.05 }
+            transition: { staggerChildren: 0.02 }
         }
     }
 
     // Each word in heading
     const wordVariant = {
-        rest: { y: 8, opacity: 0.5 },
+        rest: { y: 8, opacity: 0.7 },
         hover: {
             y: 0,
             opacity: 1,
@@ -89,7 +89,7 @@ const BentoGrid = () => {
                                 variants={cardVariant}
                                 className='lg:text-lg text-offwhite font-heading font-extrabold flex flex-wrap gap-1 group-hover:text-hotpink transition-colors duration-100 delay-100'
                             >
-                                {feature.heading.split(" ").map((word, j) => (
+                                {feature.heading.split("").map((word, j) => (
                                     <motion.span key={j} variants={wordVariant}>
                                         {word}
                                     </motion.span>
