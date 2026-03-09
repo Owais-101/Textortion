@@ -7,7 +7,7 @@ const FadeInDown = ({
     color = "#ff2d78"
 }) => {
 
-    const fadeInUpVariant = {
+    const fadeInDown = {
         hidden: { opacity: 0, y: -30, filter: 'blur(10px)' },
         animate: {
             opacity: 1, y: 0, filter: 'blur(0px)',
@@ -21,7 +21,7 @@ const FadeInDown = ({
     return (
         <>
             <motion.h1
-                variants={fadeInUpVariant}
+                variants={fadeInDown}
                 initial='hidden'
                 animate='animate'
                 style={{ color: color }}
