@@ -1,23 +1,31 @@
+import FadeInDown from "@/components/animations/FadeInDown";
+import FadeInUp from "@/components/animations/FadeInUp";
+import Wavy from "@/components/animations/Wavy";
+
 export const animations = [
     {
-        id: "typing",
-        name: "Typing Effect",
-        tag: "CLASSIC",
+        id: "fadeInUp",
+        name: "Fade In Up",
+        tag: "COMMON",
         icon: "⌨️",
-        desc: "Characters appear one by one like a typewriter."
+        desc: "Characters glides upward as it fades in, creating a smooth entrance.",
+        animation: FadeInUp
+    },
+
+    {
+        id: "f",
+        name: "fadeInDown",
+        tag: "COMMON",
+        icon: "⌨️",
+        desc: "Characters glides downward as it fades in, creating a smooth entrance.",
+        animation: FadeInDown
     },
     {
         id: "n",
-        name: "Typing Effect",
+        name: "Wavy",
         tag: "CLASSIC",
         icon: "⌨️",
-        desc: "Characters appear one by one like a typewriter."
+        desc: "Characters appear in a wave like structure creating a trippy effect.",
+        animation: Wavy
     },
-    {
-        id: "f",
-        name: "Typing Effect",
-        tag: "CLASSIC",
-        icon: "⌨️",
-        desc: "Characters appear one by one like a typewriter."
-    }
 ]

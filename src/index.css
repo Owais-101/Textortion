@@ -24,8 +24,8 @@ background-color: #0a0a0a
 
 /* Background grid for landing page */
 .hero-grid {
-  position: absolute;
-  inset: 0;
+  /* position: absolute;
+  inset: 0; */
   pointer-events: none;
   background-image:
     linear-gradient(rgba(204,255,0,0.035) 1px, transparent 1px),
