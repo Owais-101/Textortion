@@ -4,7 +4,8 @@ import { motion } from 'motion/react'
 const FadeInUp = ({
     text = "Textortion",
     duration = 0.5,
-    color = "#ff2d78"
+    color = "#ff2d78",
+    ease = "linear"
 }) => {
 
     const fadeInUpVariant = {
@@ -13,7 +14,7 @@ const FadeInUp = ({
             opacity: 1, y: 0, filter: 'blur(0px)',
             transition: {
                 duration: duration,
-                ease: "easeInOut"
+                ease: ease
             }
         }
     }

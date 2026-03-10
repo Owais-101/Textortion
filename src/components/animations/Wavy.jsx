@@ -4,8 +4,8 @@ import { motion } from 'motion/react'
 const Wavy = ({
     text = "Textortion",
     duration = 0.5,
-    color = "#ff2d78" 
-
+    color = "#ff2d78",
+    ease = "linear"
 }) => {
     const wavyVariant = {
         animate: (i) => (
@@ -14,7 +14,7 @@ const Wavy = ({
                 transition: {
                     duration: duration,
                     delay: i * 0.05,
-                    ease: "easeInOut",
+                    ease: ease,
                     repeat: Infinity
                 }
             }
