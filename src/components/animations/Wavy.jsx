@@ -11,7 +11,7 @@ const Wavy = ({
     const wavyVariant = {
         animate: (i) => (
             {
-                y: [0, -15, 0],
+                y: [0, -20, 0],
                 transition: {
                     duration: Number(duration),
                     delay: i * 0.05,

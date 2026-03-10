@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
 import { Demo, Marquee } from '@/components/ui/marquee'
 import BentoGrid from '@/components/BentoGrid'
+import HowItWorks from '@/components/HowItWorks'
+import Pricing from '@/components/Pricing'
 
 const LandingPage = () => {
     return (
@@ -21,10 +23,16 @@ const LandingPage = () => {
             <Demo />
 
             <div className='w-full min-h-screen container mx-auto'>
-                <h2 className='text-4xl md:text-5xl lg:text-7xl font-extrabold font-heading text-white px-5 lg:px-0' >Everything you need. <br /> <span>Nothing you don't.</span> </h2>
-                <p className=' mt-1 text-lg lg:text-xl font-body text-muted mb-10 px-5 lg:px-0' >Every animation crafted for one thing - making your hero section impossible to ignore.</p>
+
                 <BentoGrid />
+
+                <HowItWorks />
+
+                <Pricing />
+
             </div>
+
+
         </>
     )
 }

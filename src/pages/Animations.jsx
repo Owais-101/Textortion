@@ -1,6 +1,5 @@
 "use client";
 import Navbar from '@/components/Navbar'
-import React, { useEffect, useState } from 'react'
 import Button from '@/components/Button';
 import { FaBullseye } from "react-icons/fa";
 import { MdOutlineModeEdit } from "react-icons/md";
@@ -37,7 +36,7 @@ const Animations = () => {
                 <div className=" top-0 lg:h-screen lg:w-[20%] flex flex-col items-center border-b border-b-lime lg:border-r lg:border-r-lime py-5 px-3 overflow-auto scrollbar-hide">
                     <div className='mb-14 flex flex-col gap-1 items-center'>
                         <span
-                        className=' text-sm lg:text-base font-heading text-offwhite' >Filter by Category</span>
+                            className=' text-sm lg:text-base font-heading text-offwhite' >Filter by Category</span>
                         <CategorySelect />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-3 w-full">
@@ -69,9 +68,9 @@ const Animations = () => {
                             <span><FaBullseye /></span>Preview
                         </p>
 
-                        <div className='w-full truncate flex justify-center font-heading font-bold text-4xl md:text-6xl lg:text-7xl border border-muted h-fit px-10 py-4 rounded-xl'>
+                        <div className='w-full truncate flex justify-center font-heading font-bold text-4xl md:text-6xl lg:text-7xl border border-muted bg-muted/5 h-fit px-10 py-4 rounded-xl'>
                             <Animation
-                                key={`${selected}-${replayKey}`}
+                                key={`${selected}-${replayKey}-${color}`}
                                 text={text}
                                 color={color}
                                 duration={duration}

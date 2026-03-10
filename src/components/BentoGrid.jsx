@@ -52,7 +52,7 @@ const BentoGrid = () => {
 
     // Each word in heading
     const wordVariant = {
-        rest: { y: 8, opacity: 0.7 },
+        rest: { y: 8, opacity: 0.8 },
         hover: {
             y: 0,
             opacity: 1,
@@ -68,6 +68,8 @@ const BentoGrid = () => {
 
     return (
         <div className='w-full px-3'>
+            <h2 className='text-4xl md:text-5xl lg:text-7xl font-extrabold font-heading text-white px-5 lg:px-0' >Everything you need. <br /> <span>Nothing you don't.</span> </h2>
+            <p className=' mt-1 text-lg lg:text-xl font-body text-muted mb-10 px-5 lg:px-0' >Every animation crafted for one thing - making your hero section impossible to ignore.</p>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                 {features.map((feature, i) => (
                     <motion.div
@@ -75,7 +77,7 @@ const BentoGrid = () => {
                         variants={cardVariant}
                         initial="rest"
                         whileHover="hover"
-                        className=' group relative rounded-2xl bg-card border border-muted px-5 py-10 overflow-hidden'>
+                        className=' group relative rounded-2xl bg-card border border-muted p-5 overflow-hidden'>
                         <motion.div
                             variants={borderVariant}
                             className='absolute top-0 left-8 right-8 h-px bg-linear-to-r from-transparent via-lime to-transparent pointer-events-none'

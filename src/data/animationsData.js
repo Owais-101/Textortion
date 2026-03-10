@@ -1,5 +1,6 @@
 import FadeInDown from "@/components/animations/FadeInDown";
 import FadeInUp from "@/components/animations/FadeInUp";
+import Shimmer from "@/components/animations/Shimmer";
 import StaggerBounce from "@/components/animations/StaggerBounce";
 import StaggerFadeInUp from "@/components/animations/StaggerFadeInUp";
 import Wavy from "@/components/animations/Wavy";
@@ -207,8 +208,8 @@ export default StaggerFadeInUp`
         category: "stagger",
         icon: "⌨️",
         desc: "Characters appear one after another with dealy and spring-like bounce.",
-        animation:StaggerBounce,
-        animationCode:`import React from 'react'
+        animation: StaggerBounce,
+        animationCode: `import React from 'react'
 import { motion } from 'motion/react'
 
 const StaggerBounce = ({
@@ -259,5 +260,50 @@ const StaggerBounce = ({
 
 export default StaggerBounce`
     },
+
+    {
+        id: "shimmer",
+        name: "Shimmer",
+        category: "continuous",
+        icon: "⌨️",
+        desc: "A sweeping light gradient that glides across your text in a seamless loop.",
+        animation: Shimmer,
+        animationCode: `import React from 'react'
+import { motion } from 'motion/react'
+
+const Shimmer = ({
+    text = "Textortion",
+    duration = 0.2,
+    color = "#ff2d78",
+    ease = "easeInOut",
+}) => {
+    return (
+     <motion.h1
+        className="font-heading font-black"
+        style={{
+                background: "linear-gradient(90deg, #555 0%, 
+                #ccff00 35%, #fff 50%, #ccff00 65%, #555 100%)",
+                backgroundSize: "200% auto",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                color:color
+        }}
+        animate={{
+                backgroundPosition: ["200% center", "-200% center"],
+        }}
+         transition={{
+                duration: duration,
+                repeat: Infinity,
+                ease: ease,
+        }}
+    >
+            {text}
+    </motion.h1>
+    )
+}
+
+export default Shimmer`
+    }
 
 ]
