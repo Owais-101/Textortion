@@ -5,15 +5,17 @@ const FadeInDown = ({
     text = "Textortion",
     duration = 0.5,
     color = "#ff2d78",
-    ease = "linear"
+    ease = "linear",
+        blur = 0
+
 }) => {
 
     const fadeInDown = {
-        hidden: { opacity: 0, y: -30, filter: 'blur(10px)' },
+        hidden: { opacity: 0, y: -30, filter: `blur(${blur}px)` },
         animate: {
-            opacity: 1, y: 0, filter: 'blur(0px)',
+            opacity: 1, y: 0,filter: `blur(0px)`,
             transition: {
-                duration: duration,
+                duration: Number(duration),
                 ease: ease
             }
         }

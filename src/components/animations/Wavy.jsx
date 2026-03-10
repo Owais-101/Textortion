@@ -5,14 +5,15 @@ const Wavy = ({
     text = "Textortion",
     duration = 0.5,
     color = "#ff2d78",
-    ease = "linear"
+    ease = "linear",
+    blur = 0
 }) => {
     const wavyVariant = {
         animate: (i) => (
             {
                 y: [0, -15, 0],
                 transition: {
-                    duration: duration,
+                    duration: Number(duration),
                     delay: i * 0.05,
                     ease: ease,
                     repeat: Infinity
