@@ -37,8 +37,8 @@ const EditControls = () => {
             id: "duration",
             label: "Duration",
             type: "range",
-            min: 0.5,
-            max: 5.1,
+            min: 0.2,
+            max: 5,
             step: 0.2,
             defaultValue: duration,
             onChange: (e) => setDuration(e.target.value ? e.target.value : 0.5),
@@ -89,7 +89,7 @@ const EditControls = () => {
                         <>
                             <div className='flex justify-between font-body text-offwhite text-xs my-2'>
                                 <p>{control.min}{control.id === "duration" ? "ms" : "px"}</p>
-                                <p>{control.max}{control.id === "duration" ? "ms" : "px"}</p>
+                                <p>{control.max}{control.id === "duration" ? "s" : "px"}</p>
                             </div>
                             <input
                                 onChange={control.onChange}

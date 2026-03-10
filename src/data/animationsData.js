@@ -8,7 +8,7 @@ export const animations = [
     {
         id: "fadeInUp",
         name: "Fade In Up",
-        tag: "FADE",
+        category: "fade",
         icon: "⌨️",
         desc: "Characters glides upward as it fades in, creating a smooth entrance.",
         animation: FadeInUp,
@@ -54,7 +54,7 @@ export default FadeInUp
     {
         id: "fadeInDown",
         name: "Fade In Down",
-        tag: "FADE",
+        category: "fade",
         icon: "⌨️",
         desc: "Characters glides downward as it fades in, creating a smooth entrance.",
         animation: FadeInDown,
@@ -100,7 +100,7 @@ export default FadeInDown
     {
         id: "wavy",
         name: "Wavy",
-        tag: "CONTINUOUS",
+        category: "continuous",
         icon: "⌨️",
         desc: "Characters appear in a wave like structure creating a trippy effect.",
         animation: Wavy,
@@ -151,7 +151,7 @@ export default Wavy
     {
         id: "staggerFadeInUp",
         name: "Stagger Fade In Up",
-        tag: "STAGGER",
+        category: "stagger",
         icon: "⌨️",
         desc: "Characters appear one after another with a delay.",
         animation: StaggerFadeInUp,
@@ -204,7 +204,7 @@ export default StaggerFadeInUp`
     {
         id: "staggerBounce",
         name: "Stagger Bounce",
-        tag: "STAGGER",
+        category: "stagger",
         icon: "⌨️",
         desc: "Characters appear one after another with dealy and spring-like bounce.",
         animation:StaggerBounce,

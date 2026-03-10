@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 
 const StaggerFadeInUp = ({
     text = "Textortion",
-    duration = 0.5,
+    duration = 0.2,
     color = "#ff2d78",
     ease = "easeInOut",
     blur = 0
