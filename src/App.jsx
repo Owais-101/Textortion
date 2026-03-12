@@ -4,8 +4,8 @@ import { motion } from 'motion/react';
 import LandingPage from './pages/LandingPage';
 import { Route, Routes } from 'react-router';
 import Animations from './pages/Animations';
-import Test from '../src/components/Test';
 import Docs from './pages/Docs';
+import FAQ from './pages/Faq';
 
 const App = () => {
 
@@ -35,7 +35,7 @@ const App = () => {
             <Route path='/' element={<LandingPage />} />
             <Route path='/animations' element={<Animations />} />
             <Route path='/docs' element={<Docs />} />
-            <Route path='/faqs' element={<Docs />} />
+            <Route path='/faqs' element={<FAQ />} />
           </Routes>
 
         </motion.div>}
