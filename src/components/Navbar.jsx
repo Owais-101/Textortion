@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import Button from './Button'
 import { motion, AnimatePresence } from "framer-motion";
 
-
-
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
-    const links = ["Features", "Animations", "Pricing", "Docs"];
+    const links = ["Features", "Animations", "FAQs", "Docs"];
 
     return (
         // Laptop / Tablet Navbar
@@ -83,17 +81,6 @@ const Navbar = () => {
                                     {link}
                                 </motion.a>
                             ))}
-
-                            {/* CTA */}
-                            {/* <motion.button
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ delay: 0.6, duration: 0.4 }}
-                                className="mt-8 bg-lime text-black font-heading font-black text-sm px-8 py-3 rounded-full tracking-wide"
-                            >
-                                
-                            </motion.button> */}
                         </motion.div>
                     )}
                 </AnimatePresence>

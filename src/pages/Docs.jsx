@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import React, { useState } from 'react';
 
@@ -124,39 +125,39 @@ const Steps = ({ step }) => {
 };
 
 const PropsTable = ({ rows }) => {
-            return (
-                <div className="overflow-x-auto lg:w-fit md:text-sm my-4 rounded-xl border border-zinc-800 bg-zinc-950">
-                    <table className="w-full text-xs font-mono border-collapse min-w-[520px]">
-                        <thead>
-                            <tr className="border-b border-zinc-800 bg-zinc-900">
-                                {["Prop", "Type", "Default", "Description"].map((h) => (
-                                    <th
-                                        key={h}
-                                        className="text-left px-4 py-3 text-xs md:text-sm font-bold tracking-widest text-lime-400 uppercase"
-                                    >
-                                        {h}
-                                    </th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {rows.map((row, i) => (
-                                <tr
-                                    key={i}
-                                    className={`border-b border-zinc-900 transition-colors hover:bg-zinc-900/60 ${i % 2 === 0 ? "bg-zinc-950" : "bg-zinc-900/30"
-                                        }`}
-                                >
-                                    <td className="px-4 py-3 text-xs md:text-sm text-pink-500 whitespace-nowrap">{row.prop}</td>
-                                    <td className="px-4 py-3 text-xs md:text-sm text-blue-400 whitespace-nowrap">{row.type}</td>
-                                    <td className="px-4 py-3 text-xs md:text-sm text-zinc-500 whitespace-nowrap">{row.default}</td>
-                                    <td className="px-4 py-3 text-xs md:text-sm text-zinc-400 min-w-45">{row.desc}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            );
-        };
+    return (
+        <div className="overflow-x-auto lg:w-fit md:text-sm my-4 rounded-xl border border-zinc-800 bg-zinc-950">
+            <table className="w-full text-xs font-mono border-collapse min-w-[520px]">
+                <thead>
+                    <tr className="border-b border-zinc-800 bg-zinc-900">
+                        {["Prop", "Type", "Default", "Description"].map((h) => (
+                            <th
+                                key={h}
+                                className="text-left px-4 py-3 text-xs md:text-sm font-bold tracking-widest text-lime-400 uppercase"
+                            >
+                                {h}
+                            </th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {rows.map((row, i) => (
+                        <tr
+                            key={i}
+                            className={`border-b border-zinc-900 transition-colors hover:bg-zinc-900/60 ${i % 2 === 0 ? "bg-zinc-950" : "bg-zinc-900/30"
+                                }`}
+                        >
+                            <td className="px-4 py-3 text-xs md:text-sm text-pink-500 whitespace-nowrap">{row.prop}</td>
+                            <td className="px-4 py-3 text-xs md:text-sm text-blue-400 whitespace-nowrap">{row.type}</td>
+                            <td className="px-4 py-3 text-xs md:text-sm text-zinc-500 whitespace-nowrap">{row.default}</td>
+                            <td className="px-4 py-3 text-xs md:text-sm text-zinc-400 min-w-45">{row.desc}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
 
 
 const Docs = () => {
@@ -207,6 +208,10 @@ const Docs = () => {
 
                 </div>
 
+            </div>
+
+            <div className='mt-10 lg:mt-0'>
+                <Footer />
             </div>
 
         </div>

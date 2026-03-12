@@ -34,8 +34,8 @@ const App = () => {
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/animations' element={<Animations />} />
-            <Route path='/test' element={<Test />} />
             <Route path='/docs' element={<Docs />} />
+            <Route path='/faqs' element={<Docs />} />
           </Routes>
 
         </motion.div>}
