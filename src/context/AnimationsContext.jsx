@@ -23,9 +23,6 @@ export const AnimationsProvider = ({ children }) => {
 
     const categories = ["All", ...new Set(animations.map((items) => items.category))]
 
-    console.log(categories);
-
-
     // Filter logic
    const setSelect = (category) => {
     setActiveCategory(category)
@@ -35,7 +32,7 @@ export const AnimationsProvider = ({ children }) => {
     } else {
         const filtered = animations.filter(item => item.category === category)
         setAnimationsData(filtered)
-        setSelected(filtered[0].id)  
+        setSelected(filtered[0].id) 
     }
 }
     return (

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import Loading from './components/Loading'
+import React, { useEffect, useState } from 'react';
+import Loading from './components/Loading';
 import { motion } from 'motion/react';
 import LandingPage from './pages/LandingPage';
 import { Route, Routes } from 'react-router';
 import Animations from './pages/Animations';
+import Test from '../src/components/Test';
+import Docs from './pages/Docs';
 
 const App = () => {
 
@@ -32,6 +34,8 @@ const App = () => {
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/animations' element={<Animations />} />
+            <Route path='/test' element={<Test />} />
+            <Route path='/docs' element={<Docs />} />
           </Routes>
 
         </motion.div>}
