@@ -5,6 +5,7 @@ import { Demo, Marquee } from '@/components/ui/marquee'
 import BentoGrid from '@/components/BentoGrid'
 import HowItWorks from '@/components/HowItWorks'
 import Pricing from '@/components/Pricing'
+import Footer from '@/components/Footer'
 
 const LandingPage = () => {
     return (
@@ -29,6 +30,10 @@ const LandingPage = () => {
                 <HowItWorks />
 
                 <Pricing />
+
+                <div className='mt-10'>
+                    <Footer />
+                </div>
 
             </div>
 

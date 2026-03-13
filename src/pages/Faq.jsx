@@ -63,7 +63,6 @@ const FAQItem = ({ q, a, index }) => {
                         {String(index + 1).padStart(2, '0')}
                     </motion.span>
 
-                    {/* Letter-by-letter color flash on open */}
                     <span className='font-heading font-bold text-sm md:text-base'>
                         {q.split('').map((char, i) => (
                             <motion.span
@@ -135,7 +134,7 @@ const FAQ = () => {
             <div className='md:border-b border-muted'>
                 <Navbar />
             </div>
-            <section className='w-full px-5 md:px-10 lg:px-20 py-20 lg:flex gap-5 '>
+            <section className='w-full px-5 md:px-10 lg:px-20 py-20 flex flex-col items-center justify-center gap-5 '>
                 <div className='mb-12'>
                     {"Frequently asked".split(' ').map((word, i) => (
                         <motion.span

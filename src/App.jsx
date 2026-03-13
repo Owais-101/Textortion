@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router';
 import Animations from './pages/Animations';
 import Docs from './pages/Docs';
 import FAQ from './pages/Faq';
+import Test from './pages/Test';
 
 const App = () => {
 
@@ -36,6 +37,7 @@ const App = () => {
             <Route path='/animations' element={<Animations />} />
             <Route path='/docs' element={<Docs />} />
             <Route path='/faqs' element={<FAQ />} />
+            <Route path='/t' element={<Test />} />
           </Routes>
 
         </motion.div>}
