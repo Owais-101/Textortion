@@ -4,6 +4,7 @@ import BoringText from './BoringText';
 import Button from './Button'
 import CodeCard from './CodeCard';
 import { motion } from 'motion/react';
+import { Link } from 'react-router';
 
 const HeroSection = () => {
 
@@ -55,8 +56,8 @@ const HeroSection = () => {
                 </div>
 
                 <div className='mt-10 flex gap-5 justify-center lg:justify-start'>
-                    <Button text={"Start Now"} />
-                    <button className='font-body border border-neutral-300 rounded-xl outline-0 cursor-pointer px-6 py-1.5 text-white secondary-button-hover'>See Animations</button>
+                    <Button text={"Start Now"} path={"/docs"} />
+                    <Link to={'/animations'} className='font-body border border-neutral-300 rounded-xl outline-0 cursor-pointer px-6 py-1.5 text-white secondary-button-hover'>See Animations</Link>
                 </div>
 
             </div>

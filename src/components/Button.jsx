@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router';
 
-const Button = ({ text, onClick }) => {
+const Button = ({ text, onClick, path }) => {
     return (
-        <div>
+        <Link to={path}>
             <button
                 onClick={onClick}
-                className='px-3 py-1.5 bg-lime font-body rounded-xl button-hover cursor-pointer text-muted'>{text}</button>
-        </div>
+                className='px-3 py-1.5 bg-lime font-body rounded-xl button-hover cursor-pointer text-muted'>{text}
+            </button>
+        </Link>
     )
 }
 

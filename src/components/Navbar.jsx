@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
-import Button from './Button'
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from 'react-router'
+import React, { useState } from 'react';
+import Button from './Button';
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from 'react-router';
 
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
     const links = [
-        { label: "Features", to: "/features" },
+        { label: "Home", to: "/" },
         { label: "Animations", to: "/animations" },
         { label: "FAQs", to: "/faqs" },
         { label: "Docs", to: "/docs" },
     ];
+    const nav = useLocation().pathname;
+
+
 
     return (
         <>
@@ -28,14 +31,14 @@ const Navbar = () => {
                         <Link
                             key={i}
                             to={link.to}
-                            className='font-body text-muted hover:text-offwhite transition-colors uppercase md:text-sm lg:text-lg'
+                            className={`font-body ${link.to === nav ? `text-lime` : `text-muted`} hover:text-offwhite transition-colors uppercase md:text-sm lg:text-lg`}
                         >
                             {link.label}
                         </Link>
                     ))}
                 </div>
 
-                <Button text="Try Free" />
+                <Button text="Try Free" path="/animations" />
             </div>
 
             {/* Mobile Navbar */}

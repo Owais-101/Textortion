@@ -6,6 +6,7 @@ import SatelliteDishIcon from './ui/satellite-dish-icon'
 import BrandReactIcon from './ui/brand-react-icon'
 import PenIcon from './ui/pen-icon'
 import GearIcon from './ui/gear-icon'
+import Tag from './Tag'
 
 const BentoGrid = () => {
 
@@ -73,15 +74,16 @@ const BentoGrid = () => {
     }
 
     return (
-        <div className='w-full px-3 lg:my-40'>
+        <div className='w-full px-5 lg:my-40'>
             <motion.div
                 initial={{ opacity: 0, y: 40, rotate: -6, filter: "blur(12px)" }}
                 whileInView={{ opacity: 1, y: 0, rotate: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
             >
-                <h2 className='text-4xl md:text-5xl lg:text-7xl font-extrabold font-heading text-white px-5 lg:px-0' >Everything you need. <br /> <span>Nothing you don't.</span> </h2>
-                <p className=' mt-1 text-lg lg:text-xl font-body text-muted mb-10 px-5 lg:px-0' >Every animation crafted for one thing - making your hero section impossible to ignore.</p>
+                <Tag tag={"features"} />
+                <h2 className='text-3xl md:text-5xl lg:text-7xl font-extrabold font-heading text-white lg:px-0' >Everything you need, <br /> <span>Nothing you don't.</span> </h2>
+                <p className=' mt-1 text-base lg:text-xl font-body text-muted mb-10 px-5 lg:px-0' >Every animation crafted for one thing - making your hero section impossible to ignore.</p>
             </motion.div>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                 {features.map((feature, i) => (
@@ -105,7 +107,7 @@ const BentoGrid = () => {
 
                             <motion.h2
                                 variants={cardVariant}
-                                className='lg:text-lg text-offwhite font-heading font-extrabold flex flex-wrap gap-1 group-hover:text-hotpink transition-colors duration-100 delay-100'
+                                className=' select-none lg:text-lg text-offwhite font-heading font-extrabold flex flex-wrap gap-1 group-hover:text-lime transition-colors duration-100 delay-100'
                             >
                                 {feature.heading.split("").map((word, j) => (
                                     <motion.span key={j} variants={wordVariant}>

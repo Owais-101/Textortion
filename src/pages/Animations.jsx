@@ -7,6 +7,7 @@ import CategorySelect from '@/components/animationPage/CatergorySelect';
 import { useAnimations } from '@/context/AnimationsContext';
 import CodeBlockSection from '@/components/animationPage/CodeBlock';
 import EditControls from '@/components/animationPage/EditControls';
+import Footer from '@/components/Footer';
 
 const Animations = () => {
 
@@ -25,7 +26,7 @@ const Animations = () => {
     } = useAnimations()
 
     return (
-        <div className='w-full min-h-screen flex flex-col pb-56'>
+        <div className='w-full min-h-screen flex flex-col'>
             <div className='border-b border-lime pb-5 md:pb-0'>
                 <Navbar />
             </div>
@@ -95,8 +96,8 @@ const Animations = () => {
                 <div className='w-full h-screen lg:w-[40%] flex justify-center text-offwhite py-3 border-b border-lime overflow-auto scrollbar-hide'>
                     <CodeBlockSection />
                 </div>
-
             </div>
+            <Footer />
         </div>
     )
 }

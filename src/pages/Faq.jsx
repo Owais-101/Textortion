@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import PulsatingDot from '@/components/PulsatingDot'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const faqs = [
     {
@@ -40,15 +41,8 @@ const FAQItem = ({ q, a, index }) => {
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             transition={{ delay: index * 0.1, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
             className={`border-b border-muted relative overflow-hidden`}
-            onHoverStart={() => setHovered(true)}
-            onHoverEnd={() => setHovered(false)}
+
         >
-            <motion.div
-                className='absolute inset-0 bg-lime/5 pointer-events-none'
-                initial={{ scaleX: 0, originX: 0 }}
-                animate={{ scaleX: hovered ? 1 : 0 }}
-                transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-            />
 
             <button
                 onClick={() => setOpen(!open)}
@@ -107,7 +101,6 @@ const FAQItem = ({ q, a, index }) => {
                         transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
                         className='overflow-hidden relative z-10'
                     >
-                        {/* Answer text with word-by-word stagger */}
                         <p className='font-body text-sm md:text-base pb-5 px-1 pl-10 leading-relaxed'>
                             {a.split(' ').map((word, i) => (
                                 <motion.span
@@ -173,6 +166,7 @@ const FAQ = () => {
                 </motion.div>
 
             </section>
+            <Footer />
         </>
     )
 }

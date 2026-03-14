@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import Tag from './Tag';
 
 const HowItWorks = () => {
 
@@ -33,12 +34,9 @@ const HowItWorks = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
             >
-                <div className='flex items-center gap-2 uppercase text-muted font-heading font-bold' >
-                    <div className=' h-0.5 w-4 lg:w-6 lg:h-1 bg-lime rounded-full'></div>
-                    <h2 className='text-xs lg:text-base'>How it Works</h2>
-                </div>
-                <h1 className='text-4xl md:text-5xl lg:text-7xl font-heading font-extrabold text-offwhite flex items-center' >Three Steps. That's It</h1>
-                <p className=' mt-1 text-lg lg:text-xl font-body text-muted mb-10'>Open, pick, paste thats it. (refer to docs for more detailed overview)</p>
+                <Tag tag={"how it works"} />
+                <h1 className='text-3xl md:text-5xl lg:text-7xl font-heading font-extrabold text-offwhite flex items-center' >Three Steps. That's It</h1>
+                <p className=' mt-1 text-base lg:text-xl font-body text-muted mb-10'>Open, pick, paste thats it. (refer to docs for more detailed overview)</p>
 
             </motion.div>
 
@@ -57,9 +55,9 @@ const HowItWorks = () => {
                         viewport={{ once: true, amount: 0.3 }}
 
                         key={i}
-                        className='p-5 border border-muted rounded-xl' >
+                        className='p-5 border border-muted rounded-xl ' >
                         <h2 className='font-heading font-extrabold text-6xl lg:text-8xl text-lime/60 hover:text-lime transition-colors'>{step.step}</h2>
-                        <h1 className='font-heading font-extrabold text-xl lg:text-xl text-offwhite/80'>{step.stepHeading}</h1>
+                        <h1 className='font-heading font-extrabold text-xl lg:text-xl text-offwhite select-none hover:text-lime '>{step.stepHeading}</h1>
                         <p className=' text-base lg:text-lg text-muted font-body mt-5'>{step.stepDesc}</p>
                     </motion.div>
                 ))}
