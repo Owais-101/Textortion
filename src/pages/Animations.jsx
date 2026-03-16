@@ -8,6 +8,7 @@ import { useAnimations } from '@/context/AnimationsContext';
 import CodeBlockSection from '@/components/animationPage/CodeBlock';
 import EditControls from '@/components/animationPage/EditControls';
 import Footer from '@/components/Footer';
+import { useRef } from 'react';
 
 const Animations = () => {
 
@@ -25,16 +26,19 @@ const Animations = () => {
         blur
     } = useAnimations()
 
+    const contentRef = useRef(null)
+
+
     return (
-        <div className='w-full min-h-screen flex flex-col'>
-            <div className='border-b border-lime pb-5 md:pb-0'>
+        <div className='w-full min-h-screen'>
+            <div className='border-b border-muted pb-5 md:pb-0'>
                 <Navbar />
             </div>
 
             <div className='max-md:flex-col lg:flex items-stretch'>
 
                 {/* Left side */}
-                <div className=" top-0 lg:h-screen lg:w-[20%] flex flex-col items-center border-b border-b-lime lg:border-r lg:border-r-lime py-5 px-3 overflow-auto scrollbar-hide">
+                <div className=" top-0 lg:h-screen lg:w-[30%] flex flex-col items-center border-b border-b-muted lg:border-r lg:border-r-muted py-5 px-3 overflow-auto scrollbar-hide">
                     <div className='mb-14 flex flex-col gap-1 items-center'>
                         <span
                             className=' text-sm lg:text-base font-heading text-offwhite' >Filter by Category</span>
@@ -43,7 +47,13 @@ const Animations = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-3 w-full">
                         {animationsData.map((item, i) => (
                             <div
-                                onClick={() => { setSelected(item.id); }}
+                                onClick={() => {
+                                    setSelected(item.id);
+                                    if (window.innerWidth > 768) {
+                                        contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    } 
+                                }}
                                 key={i}
                                 className={`border ${selected === item.id ? 'border-lime' : 'border-muted'} w-full rounded-lg flex flex-col gap-3 justify-center px-5 py-4 cursor-pointer hover:border-lime transition-colors`}>
                                 <div className='flex justify-between'>
@@ -57,7 +67,7 @@ const Animations = () => {
                 </div>
 
                 {/* Middle (ANIMATION) side */}
-                <div className='w-full h-fit lg:h-screen border-b border-b-lime lg:w-[40%] flex justify-center border-t lg:border-t-0 border-lime lg:border-r lg:border-lime px-5 py-10 overflow-auto scrollbar-hide'>
+                <div ref={contentRef} className=' lg:sticky lg:top-0 lg:px-20 w-full h-fit lg:h-screen border-b border-b-limeflex justify-center border-t lg:border-t-0 border-muted lg:border-r lg:border-muted px-5 py-10 overflow-auto scrollbar-hide'>
 
                     <div className='w-full'>
 
@@ -87,15 +97,19 @@ const Animations = () => {
                         {/* Controls Div */}
                         <EditControls />
 
-                        {/* Spacer */}
-                        <div className='h-4 w-full shrink-0' />
+
+                        {/* Code Block Div */}
+                        <div className='w-full h-screen flex justify-center text-offwhite py-3 scrollbar-hide mt-10'>
+                            <CodeBlockSection />
+                        </div>
+
+
                     </div>
+                    {/* Spacer */}
+                    <div className='h-40 w-full shrink-0' />
                 </div>
 
-                {/* Code Block Div */}
-                <div className='w-full h-screen lg:w-[40%] flex justify-center text-offwhite py-3 border-b border-lime overflow-auto scrollbar-hide'>
-                    <CodeBlockSection />
-                </div>
+
             </div>
             <Footer />
         </div>

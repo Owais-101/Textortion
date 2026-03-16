@@ -37,7 +37,7 @@ const App = () => {
             <Route path='/animations' element={<Animations />} />
             <Route path='/docs' element={<Docs />} />
             <Route path='/faqs' element={<FAQ />} />
-            <Route path='/t' element={<Test />} />
+            <Route path='/test' element={<Test />} />
           </Routes>
 
         </motion.div>}

@@ -24,7 +24,8 @@ const CodeBlockSection = () => {
 
 
     return (
-        <div className='w-[90%] h-fit mt-5'>
+        <div className='w-full h-fit mt-5'>
+            <h1 className='mb-2 font-heading text-xl lg:text-2xl font-extrabold' >Code</h1>
             <CodeBlock className='border-muted rounded-xl' key={selected} data={code} defaultValue={code[0].language}>
                 <CodeBlockHeader className='border-muted'>
                     <CodeBlockFiles>
